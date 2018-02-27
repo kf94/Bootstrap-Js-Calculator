@@ -1,0 +1,33 @@
+.btn {
+  color : black;
+  padding : 1.3em;
+  margin : .135em;
+  background-color: orange;
+  width: 60px;
+  height:60px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-family: monospace;
+}
+
+.container {
+  background-color: black;
+  width : 400px;
+  padding:15px;
+  border-radius: 10px;
+  margin : 20px;
+}
+
+.screen {
+  margin:.8em;
+  width:335px;
+  height: 75px;
+  border-radius: 5px;
+  margin-left: 3px;
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+
+.row {
+  margin-left: 15px;
+}
