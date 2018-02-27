@@ -1,19 +1,36 @@
-const calculator = {
-  sum : 0,
-  numString : "",
-  calculation : "",
-  num1 : function() {
-    const but = document.querySelector('#back');
-    but.addEventListener('click', function() {
-      this.numString += "1";
-      document.querySelector('#display').value = this.numString;
-    });
-  }
-};
+//I would like to encapsulate all the data/functionality into the calculator object, but i'm not quite sure how to do that just yet...
+
+//Also I want to refactor so that alike buttons, such as number and operators are not repeated
+
+//The following invalid entries cause errors:
+
+// 'B'(back) has some issues if used to delete more than the current selection(numString)
+
+// '=' has some issues if invalid entry is selected
+
+// operators fail if used consecutively with one another
+
+
+
+// const calculator = {
+//   sum : 0,
+//   numString : "",
+//   calculation : "",
+//   num1 : function() {
+//     const but = document.querySelector('#back');
+//     but.addEventListener('click', function() {
+//       this.numString += "1";
+//       document.querySelector('#display').value = this.numString;
+//     });
+//   }
+// };
+
+
 
 let numString = '';
 let calculation = '';
 let sum = 0;
+
 const but1 = document.querySelector('#n1');
 but1.addEventListener('click',function() {
   numString += 1;
@@ -76,6 +93,7 @@ but0.addEventListener('click',function() {
 
 const butDec = document.querySelector('#dec');
 butDec.addEventListener('click',function() {
+  if (numString.indexOf('.') === -1)
   numString += '.';
   document.querySelector('#display').value = numString;
 });
@@ -134,4 +152,12 @@ butClear.addEventListener('click',function() {
   numString = '';
   sum = 0;
   document.querySelector('#display').value = sum;
+});
+
+const butBack = document.querySelector('#back');
+butBack.addEventListener('click',function() {
+  if (numString !== '') {
+    numString = numString.slice(0,-1);
+  };
+  document.querySelector('#display').value = numString;
 });
