@@ -1,31 +1,3 @@
-//I would like to encapsulate all the data/functionality into the calculator object, but i'm not quite sure how to do that just yet...
-
-//Also I want to refactor so that alike buttons, such as number and operators are not repeated
-
-//The following invalid entries cause errors:
-
-// 'B'(back) has some issues if used to delete more than the current selection(numString)
-
-// '=' has some issues if invalid entry is selected
-
-// operators fail if used consecutively with one another
-
-
-
-// const calculator = {
-//   sum : 0,
-//   numString : "",
-//   calculation : "",
-//   num1 : function() {
-//     const but = document.querySelector('#back');
-//     but.addEventListener('click', function() {
-//       this.numString += "1";
-//       document.querySelector('#display').value = this.numString;
-//     });
-//   }
-// };
-
-
 
 let numString = '';
 let calculation = '';
